@@ -50,7 +50,7 @@ public class PersistentMoneyMinorAmountAndCurrency extends AbstractMultiColumnUs
         
         BigDecimal majorVal = BigDecimal.valueOf(amountMinorPart, currencyUnitPart.getDefaultFractionDigits());
 
-		return Money.of(majorVal, currencyUnitPart);
+		return Money.of(currencyUnitPart, majorVal);
     }
 
     @Override
