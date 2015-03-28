@@ -46,8 +46,9 @@ public class PersistentFastMoneyMajorAmountAndCurrency extends AbstractMultiColu
 
         CurrencyUnit currencyUnitPart = (CurrencyUnit) convertedColumns[0];
         Long amountMajorPart = (Long) convertedColumns[1];
+        FastMoney money = FastMoney.of(amountMajorPart, currencyUnitPart);
 
-        return FastMoney.of(amountMajorPart, currencyUnitPart);
+        return money;
     }
 
     @Override

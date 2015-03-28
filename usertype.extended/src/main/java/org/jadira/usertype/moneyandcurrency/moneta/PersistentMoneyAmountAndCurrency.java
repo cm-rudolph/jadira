@@ -47,8 +47,9 @@ public class PersistentMoneyAmountAndCurrency extends AbstractMultiColumnUserTyp
 
         CurrencyUnit currencyUnitPart = (CurrencyUnit) convertedColumns[0];
         BigDecimal amountPart = (BigDecimal) convertedColumns[1];
+        Money money = Money.of(amountPart, currencyUnitPart);
 
-        return Money.of(amountPart, currencyUnitPart);
+        return money;
     }
 
     @Override
